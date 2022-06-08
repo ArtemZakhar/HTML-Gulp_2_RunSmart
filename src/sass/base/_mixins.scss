@@ -1,0 +1,39 @@
+@media (max-width: 1200px) {
+  .header {
+    margin: 0 30px 0 30px;
+  }
+  .promo {
+    &__wrapper {
+      margin: 90px 30px 0 0;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .header {
+    &__logo {
+      width: 150px;
+    } 
+    &__official {
+      font-size: 10px;
+      span {
+        font-size: 16px;
+      }
+    }
+    &__phone {
+      font-size: 16px;
+    }
+  }
+  .button {
+    width: 100px;
+    height: 25px;
+    font-size: 10px;
+    line-height: 16px;
+    &_main {
+      width: 300px;
+      height: 50px;
+      font-size: 16px;
+      line-height: 25px;
+    }
+  }
+}
