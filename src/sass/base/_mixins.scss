@@ -36,6 +36,21 @@
       font-size: 16px;
     }
   }
+  .carousel{
+    .container{
+      width: 60%;
+    }
+  }
+  .tns-outer {
+    display: block;
+    margin: 0 auto;
+    width: 600px;
+  }
+  .tns-item{
+    img {
+      width: 90%;
+    }
+  }
 }
 
 @media (max-width: 991px) {
@@ -149,6 +164,11 @@
       font-size: 16px;
     }
   }
+  .carousel{
+    .container{
+      width: 80%;
+    }
+  }
 }
 
 @media (max-width: 767px) {
@@ -226,6 +246,22 @@
       &:nth-child(3) {
         margin-bottom: 13px;
       }
+    }
+  }
+  .carousel{
+    .container {
+      width: 80%;
+      button {
+        display: none;
+      }
+    }
+  }
+  .tns-outer {
+    width: 500px;
+  }
+  .tns-item{
+    img {
+      width: 90%;
     }
   }
 }
@@ -314,6 +350,19 @@
       height: 35px;
       width: 284px;
       font-size: 15px;
+    }
+  }
+  .carousel{
+    .container {
+      width: 100%;
+    }
+  }
+  .tns-outer {
+    width: 300px;
+  }
+  .tns-item{
+    img {
+      width: 70%;
     }
   }
 }

@@ -4,6 +4,8 @@
 @import "block/buttons";
 @import "block/advantages";
 @import "block/consultation";
+@import "block/carousel";
+@import "block/catalog";
 @import "block/forms";
 @import "base/mixins";
 
@@ -14,5 +16,6 @@
 .container {
   max-width: 950px;
   margin: 0 auto;
+  position: relative;
 }
 
