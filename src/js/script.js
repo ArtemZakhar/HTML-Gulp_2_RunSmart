@@ -27,10 +27,54 @@ $(document).ready(function() {
         e.preventDefault();
         $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
         $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
-      })
+      });
     });
   }
   toggleSlide('.catalog-item__back');
   toggleSlide('.catalog-item__link');
 
+  $('[data-model=consultation]').on('click', function () {
+    $('.overlay, #consultation').fadeIn();
+    
+  });
+  $('.modal__close').on('click', function () {
+    $('.overlay, #consultation, #order, #thanks').fadeOut();
+  });
+
+  $('.button_mini').each(function(i) {
+    $(this).on('click', function () {
+      $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+      $('.overlay, #order').fadeIn();
+    });
+  });
+
+  function validateForms(form) {
+    $(form).validate({
+      rules: {
+        name: "required",
+        phone: "required",
+        email: {
+          required: true,
+          email: true
+        }
+      },
+      messages: {
+        name: "Людинка, введи своє ім'я",
+        phone: {
+          required: "Введіть свій номер телефону",
+          email: "Не правильно зазначений номер телефону"
+        },
+        email: {
+          required: "Електронну пошту, будь-ласочка",
+          email: "Не правильно зазначена адреса"
+        }
+      }
+    });
+  }
+
+  validateForms ('#consultation-form');
+  validateForms ('#order form');
+  validateForms ('#consultation form');
+
+  $('input[name=phone]').mask("+38 (999) 999-9999");
 });
