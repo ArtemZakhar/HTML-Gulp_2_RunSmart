@@ -18,6 +18,11 @@
 			width: 70px;
 		}
 	}
+	&__icon {
+		&_animated {
+		animation: heartbeat 2s ease infinite;
+		}
+	}
 }
 .title {
 	font-weight: 700;
